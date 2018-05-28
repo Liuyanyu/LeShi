@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="font/iconfont.css"/>
+    <link rel="stylesheet" href="font1/iconfont1.css"/>
+    <link rel="stylesheet" href="font2/iconfont.css"/>
+    <link rel="stylesheet" href="font3/iconfont.css"/>
+    <link rel="stylesheet" href="index.css"/>
+    <script>
+        (function () {
+            var supportsOrientationChange = 'onorientationchange' in window ? 'orientationchange' : 'resize';
+            var clientWidth = document.documentElement.clientWidth;
+            var timer;
+            function setRem() {
+                clientWidth = document.documentElement.clientWidth;
+                var nowPX = clientWidth / 100 *10;
+                document.documentElement.style.fontSize = nowPX + 'px';
+            }
+            clientWidth !== 750 && setRem();
+            window.addEventListener(supportsOrientationChange, function () {
+                clearTimeout(timer);
+                timer = setTimeout(function () {
+                    setRem();
+                }, 300);
+            }, false);
+        })();
+    </script>
+
+    <script src="js/jquery-1.7.1.min.js"></script>
+    <script src="js/jquery.event.drag-1.5.min.js"></script>
+    <script src="js/jquery.touchSlider.js"></script>
+    <script src="index.js"></script>
+</head>
+<body>
+    <div class="layout">
+        <!-- 头部-->
+        <header>
+            <div class="headBox">
+                <div class="logo">
+                    <a href="" class="index_logo"></a>
+                </div>
+                <div class="userBox">
+                    <a href="" class="iconfont icon-iconfontsousuo"></a>
+                    <a class="iconfont icon-iconfontyonghu" href=""></a>
+                    <a href="" class="leapp_btn">
+                        <span>下载APP</span>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+         <div class="j-main">
+             <!-- 导航-->
+             <nav class="sub_nav j-nav">
+                 <div class="sub_navCnt" id="wrapper">
+                     <ul id="j_nav_wrapper" class="scroll" style="width: 3283.06px; transform: translate(0px, 0px);">
+                         <li  class="active"><a href="javascript:;">推荐</a></li>
+                         <li><a href="javascript:;">蜀山战纪2</a></li>
+                         <li><a href="javascript:;">热点</a></li>
+                         <li><a href="javascript:;">电视剧</a></li>
+                         <li><a href="javascript:;">电影</a></li>
+                         <li><a href="javascript:;">儿童</a></li>
+                         <li><a href="javascript:;">综艺</a></li>
+                         <li><a href="javascript:;">动漫</a></li>
+                         <li><a href="javascript:;">上海</a></li>
+                         <li><a href="javascript:;">搞笑</a></li>
+                         <li><a href="javascript:;">娱乐</a></li>
+                         <li><a href="javascript:;">资讯</a></li>
+                         <li><a href="javascript:;">游戏</a></li>
+                         <li><a href="javascript:;">直播中心</a></li>
+                         <li><a href="javascript:;">爱奇艺号</a></li>
+                     </ul>
+                     <div class="arrow-channel">
+                         <span class="iconfont icon-yingyong"></span>
+                     </div>
+                 </div>
+             </nav>
+             <!-- 轮播-->
+             <div class="main_visual">
+                 <div class="flicking_con">
+                     <a href="#">1</a>
+                     <a href="#">2</a>
+                     <a href="#">3</a>
+                     <a href="#">4</a>
+                     <a href="#">5</a>
+                 </div>
+                 <div class="main_image">
+                     <ul>
+                         <li><img src="img/tu1.jpg" alt="" class="img_1"/></li>
+                         <li><img src="img/tu2.jpg" alt="" class="img_2"/></li>
+                         <li><img src="img/tu3.jpg" alt="" class="img_3"/></li>
+                         <li><img src="img/tu4.jpg" alt="" class="img_4"/></li>
+                         <li><img src="img/tu5.jpg" alt="" class="img_5"/></li>
+                     </ul>
+                     <a href="javascript:;" id="btn_prev"></a>
+                     <a href="javascript:;" id="btn_next"></a>
+                 </div>
+             </div>
+             <!-- 乐视重磅-->
+             <section class="column1">
+                 <div class="column_tit">
+                     <h2>
+                         <a href="">乐视重磅</a>
+                     </h2>
+                 </div>
+                 <div class="column_body">
+                     <div class="hotList">
+                         <ul>
+                             <li>
+                                 <i class="iconfont icon-bofang"></i>
+                                 <a href="">楚乔传:泪奔！楚乔宇文玥额头吻别</a>
+                             </li>
+                             <li>
+                                 <i class="iconfont icon-bofang"></i>
+                                 <a href="">楚乔传:泪奔！楚乔宇文玥额头吻别</a>
+                             </li>
+                         </ul>
+                     </div>
+                     <div class="cnt_box">
+                         <ul>
+                             <li class="cnt_li">
+                                 <a href="" class="a_temp1">
+                                     <img src="img/tutu1.jpg" alt="" class="a_img"/>
+                                     <span class="a_hy">会员</span>
+                                     <span class="a_cnt">
+                                         <p class="p1">速度与激情</p>
+                                         <p class="p2">这剂肾上腺素无法抗拒！</p>
+                                     </span>
+                                     <em class="a_rb">9.5</em>
+                                 </a>
+                             </li>
+                             <li class="cnt_li">
+                                 <a href="" class="a_temp1">
+                                     <img src="img/tutu2.jpg" alt="" class="a_img"/>
+                                     <span class="a_cnt">
+                                         <p class="p1">好好吃饭吧·MAN爆</p>
+                                         <p class="p2">黄景瑜变金刚狼炒螺蛳</p>
+                                     </span>
+                                     <em class="a_rb">08-06期</em>
+                                 </a>
+                             </li>
+                             <li class="cnt_li">
+                                 <a href="" class="a_temp1">
+                                     <img class="a_img" src="img/tutu3.jpg" alt=""/>
+                                     <span class="a_hy">会员</span>
+                                    <span class="a_cnt">
+                                    <p class="p1">呼啸青春·报告老师</p>
+                                    <p class="p2">呼啸青春·报告老师</p>
+                                    </span>
+                                 </a>
+                             </li>
+                             <li class="cnt_li">
+                                 <a href="" class="a_temp1">
+                                     <img class="a_img" src="img/tutu4.jpg" alt=""/>
+                                    <span class="a_cnt">
+                                    <p class="p1">心理罪2</p>
+                                    <p class="p2">见心见性 直指罪心</p>
+                                    </span>
+                                 </a>
+                             </li>
+                         </ul>
+                     </div>
+                 </div>
+             </section>
+             <!--七月热播 -->
+             <section class="column2">
+                 <div class="column_tit">
+                     <h2>
+                         <a href="javascript:;">七月热播</a>
+                     </h2>
+                 </div>
+                 <div class="column_body">
+                     <div class="cnt_box">
+                         <ul class="loadCh">
+                             <li class="cnt_li">
+                                 <a href="" class="a_temp1">
+                                     <img class="a_img" src="img/tutu5.jpg" alt=""/>
+                                     <span class="a_hy">会员</span>
+                                     <span class="a_app">APP专享</span>
+                                    <span class="a_cnt">
+                                        <p class="p1">K星异客</p>
+                                        <p class="p2">外星人是否真的来到地球？</p>
+                                    </span>
+                                 </a>
+                             </li>
+                             <li class="cnt_li">
+                                 <a href="" class="a_temp1">
+                                     <img class="a_img" src="img/tutu6.gif" alt=""/>
+                                     <span class="a_hy">会员</span>
+                                     <span class="a_app">APP专享</span>
+                                    <span class="a_cnt">
+                                    <p class="p1">异星觉醒</p>
+                                    <p class="p2">外星生命体变杀人狂魔</p>
+                                    </span>
+                                     <em class="a_rb">9.4</em>
+                                 </a>
+                             </li>
+                             <li class="cnt_li">
+                                 <a href="" class="a_temp1">
+                                     <img class="a_img" src="img/tutu7.jpg" alt=""/>
+                                     <span class="a_app">APP专享</span>
+                                    <span class="a_cnt">
+                                    <p class="p1">变种异煞</p>
+                                    <p class="p2">调换身份圆漫游太空梦</p>
+                                    </span>
+                                 </a>
+                             </li>
+                             <li class="cnt_li">
+                                 <a href="" class="a_temp1">
+                                     <img class="a_img" src="img/tutu8.jpg" alt=""/>
+                                     <span class="a_app">APP专享</span>
+                                    <span class="a_cnt">
+                                    <p class="p1">穿梭阴阳间</p>
+                                    <p class="p2">那时的小罗伯特·唐尼好嫩</p>
+                                    </span>
+                                 </a>
+                             </li>
+                         </ul>
+                         <ul class="loadChange">
+                             <li style="width: 100%">
+                                 <a href="">
+                                     <span class="iconfont icon-huanyipi"></span>
+                                     换一换
+                                 </a>
+                             </li>
+                         </ul>
+                     </div>
+                 </div>
+             </section>
+             <!-- 今日热点-->
+             <section class="column3">
+                 <div class="column_tit">
+                     <h2>
+                         <a href="">今日热点</a>
+                     </h2>
+                 </div>
+                 <div class="column_body">
+                     <div class="hotList">
+                         <ul>
+                             <li>
+                                 <i class="iconfont icon-bofang"></i>
+                                 <a href="">致敬英雄：献给建军90周年 </a>
+                             </li>
+                             <li>
+                                 <i  class="iconfont icon-bofang" ></i>
+                                 <a href="">天津警方：又一男子误入传销组织死亡 </a>
+                             </li>
+                         </ul>
+                     </div>
+                     <div class="cnt_box">
+                         <ul>
+                             <li class="cnt_li">
+                                 <a href="" class="a_temp1">
+                                     <img class="a_img" src="img/tutu10.jpg" alt=""/>
+                                    <span class="a_cnt">
+                                    <p class="p1">男童蹲着玩耍遭车碾压</p>
+                                    <p class="p2">女子全程目睹毫无反应</p>
+                                    </span>
+                                 </a>
+                             </li>
+                             <li class="cnt_li">
+                                 <a href="" class="a_temp1">
+                                     <img class="a_img" src="img/tutu9.jpg" alt=""/>
+                                    <span class="a_cnt">
+                                    <p class="p1">杨幂高中毕业照曝光</p>
+                                    <p class="p2">同班同学：她常旷课还化妆</p>
+                                    </span>
+                                 </a>
+                             </li>
+                             <li class="cnt_li">
+                                 <a href="" class="a_temp1">
+                                     <img class="a_img" src="img/tutu11.gif" alt=""/>
+                                    <span class="a_cnt">
+                                    <p class="p1">男子高架单腿站骑摩托</p>
+                                    <p class="p2">“花式炫技”引来交警调查</p>
+                                    </span>
+                                 </a>
+                             </li>
+                             <li class="cnt_li">
+                                 <a href="" class="a_temp1">
+                                     <img class="a_img" src="img/tutu12.jpg" alt=""/>
+                                    <span class="a_cnt">
+                                    <p class="p1">直升机失控险撞男子</p>
+                                    <p class="p2">命大！飞机擦身而过后坠毁</p>
+                                    </span>
+                                 </a>
+                             </li>
+                         </ul>
+                         <ul class="loadChange">
+                             <li>
+                                 <a class="load_a" href="">
+                                     查看更多
+                                     <span class="iconfont icon-chakangengduo"></span>
+                                 </a>
+                             </li>
+                             <li>
+                                 <a href="">
+                                     <span class="iconfont icon-huanyipi"></span>
+                                     换一换
+                                 </a>
+                             </li>
+                         </ul>
+
+                     </div>
+                 </div>
+             </section>
+             <!-- 直播-->
+             <section class="column4">
+                  <div class="column_tit">
+                      <h2>
+                          <a href="javascript:;">直播</a>
+                      </h2>
+                  </div>
+                  <div class="column_body4">
+                      <div class="cnt_box">
+                          <ul>
+                              <li class="cnt_li">
+                                  <a href="" class="a_temp1">
+                                      <img class="a_img" src="img/tutu13.jpg" alt=""/>
+                                      <span class="b_img">直播中</span>
+                                    <span class="a_cnt">
+                                    <p class="p1">杨幂高中毕业照曝光</p>
+                                    </span>
+                                  </a>
+                              </li>
+                              <li class="cnt_li">
+                                  <a href="" class="a_temp1">
+                                      <img class="a_img" src="img/tutu14.png" alt=""/>
+                                      <span class="b_img">直播中</span>
+                                    <span class="a_cnt">
+                                    <p class="p1">男童蹲着玩耍遭车碾压</p>
+                                    </span>
+                                  </a>
+                              </li>
+
+
+                          </ul>
+                          <ul class="loadChange">
+                              <li style="width: 100%">
+                                  <a class="load_a" href="">
+                                      查看更多
+                                      <span class="iconfont icon-chakangengduo"></span>
+                                  </a>
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+
+              </section>
+             <!--综艺 -->
+             <section class="column5">
+                 <div class="column_tit">
+                     <h2>
+                         <a href="">综艺</a>
+                     </h2>
+                 </div>
+                 <div class="column_body">
+                     <div class="cnt_boxOne">
+                         <a href="" class="a_temp1">
+                             <img class="a_img1" src="img/tut7.jpg" alt=""/>
+                            <span class="a_cnt">
+                            <p class="p1">好好吃饭吧·第10期</p>
+                            <p class="p2">飙演技！黄景瑜Selina再现《甄嬛传》名场面</p>
+                            </span>
+                         </a>
+                     </div>
+                     <div class="cnt_box">
+                         <ul>
+                             <li class="cnt_li">
+                                 <a href="" class="a_temp1">
+                                     <img class="a_img" src="img/tut1.jpg" alt=""/>
+                                    <span class="a_cnt">
+                                        <p class="p1">喜剧班的春天</p>
+                                        <p class="p2">齐天大圣72变竟成网红主播</p>
+                                    </span>
+                                     <em class="a_rb">08:46</em>
+                                 </a>
+                             </li>
+                             <li class="cnt_li">
+                                 <a href="" class="a_temp1">
+                                     <img class="a_img" src="img/tut2.gif" alt=""/>
+                                    <span class="a_cnt">
+                                    <p class="p1">极速前进</p>
+                                    <p class="p2">范冰冰划龙舟被海水拍晕</p>
+                                    </span>
+                                     <em class="a_rb">08:26</em>
+                                 </a>
+                             </li>
+                             <li class="cnt_li">
+                                 <a href="" class="a_temp1">
+                                     <img class="a_img" src="img/tut3.jpg" alt=""/>
+                                    <span class="a_cnt">
+                                    <p class="p1">爱情保卫战·作女当道</p>
+                                    <p class="p2">女友结婚逼公婆蹦极迎娶</p>
+                                    </span>
+                                 </a>
+                             </li>
+                             <li class="cnt_li">
+                                 <a href="" class="a_temp1">
+                                     <img class="a_img" src="img/tut4.jpg" alt=""/>
+                                    <span class="a_cnt">
+                                    <p class="p1">旅途的花样</p>
+                                    <p class="p2">乔欣整蛊华晨宇失败被嫌弃</p>
+                                    </span>
+                                     <em class="a_rb">09:52</em>
+                                 </a>
+                             </li>
+                             <li class="cnt_li">
+                                 <a href="" class="a_temp1">
+                                     <img class="a_img" src="img/tut5.jpg" alt=""/>
+                                    <span class="a_cnt">
+                                    <p class="p1">家庭幽默录像</p>
+                                    <p class="p2">吴京把儿子当枪使</p>
+                                    </span>
+                                     <em class="a_rb">08-07期</em>
+                                 </a>
+                             </li>
+                             <li class="cnt_li">
+                                 <a href="" class="a_temp1">
+                                     <img class="a_img" src="img/tut6.jpg" alt=""/>
+                                    <span class="a_cnt">
+                                    <p class="p1">一站到底·巅峰对决</p>
+                                    <p class="p2">哈佛大学对战麻省理工</p>
+                                    </span>
+                                     <em class="a_rb">08-07期</em>
+                                 </a>
+                             </li>
+                         </ul>
+                         <ul class="loadChange">
+                             <li>
+                                 <a class="load_a" href="">
+                                     查看更多
+                                     <span class="iconfont icon-chakangengduo"></span>
+                                 </a>
+                             </li>
+                             <li>
+                                 <a href="">
+                                     <span class="iconfont icon-huanyipi"></span>
+                                     换一换
+                                 </a>
+                             </li>
+                         </ul>
+                     </div>
+                 </div>
+             </section>
+             <!-- 影视会员-->
+             <section class="column6">
+                 <div class="column_tit">
+                     <h2>
+                         <a href="javascript:;">影视会员</a>
+                     </h2>
+                 </div>
+                 <div class="column_body">
+                     <div class="cnt_box">
+                         <ul>
+                             <li class="cnt_li">
+                                 <a href="" class="a_temp1">
+                                     <img class="a_img" src="img/ying1.jpg" alt=""/>
+                                     <span class="a_hy">会员</span>
+                                     <span class="a_app">APP专享</span>
+                                     <p class="p1">速度与激情8</p>
+                                     <em class="a_ra">9.5</em>
+                                 </a>
+                             </li>
+                             <li class="cnt_li">
+                                 <a href="" class="a_temp1">
+                                     <img class="a_img" src="img/ying2.jpg" alt=""/>
+                                     <span class="a_hy">会员</span>
+                                     <span class="a_app">APP专享</span>
+                                     <p class="p1">记忆大师</p>
+                                     <em class="a_ra">9.4</em>
+                                 </a>
+                             </li>
+                             <li class="cnt_li">
+                                 <a href="" class="a_temp1">
+                                     <img class="a_img" src="img/ying3.jpg" alt=""/>
+                                     <span class="a_hy">会员</span>
+                                     <span class="a_app">APP专享</span>
+                                     <p class="p1">痞子兵王2</p>
+                                 </a>
+                             </li>
+                             <li class="cnt_li">
+                                 <a href="" class="a_temp1">
+                                     <img class="a_img" src="img/ying4.jpg" alt=""/>
+                                     <span class="a_hy">会员</span>
+                                     <p class="p1">异星觉醒</p>
+                                 </a>
+                             </li>
+                             <li class="cnt_li">
+                                 <a href="" class="a_temp1">
+                                     <img class="a_img" src="img/ying5.jpg" alt=""/>
+                                     <span class="a_hy">会员</span>
+                                     <p class="p1">盗墓笔记</p>
+                                 </a>
+                             </li>
+                             <li class="cnt_li">
+                                 <a href="" class="a_temp1">
+                                     <img class="a_img" src="img/ying6.jpg" alt=""/>
+                                     <span class="a_hy">会员</span>
+                                     <p class="p1">爵迹</p>
+                                 </a>
+                             </li>
+                         </ul>
+                         <ul class="loadChange">
+                             <li>
+                                 <a class="load_a" href="">
+                                     查看更多
+                                     <span class="iconfont icon-chakangengduo"></span>
+                                 </a>
+                             </li>
+                             <li>
+                                 <a href="">
+                                     <span class="iconfont icon-huanyipi"></span>
+                                     换一换
+                                 </a>
+                             </li>
+                         </ul>
+                     </div>
+                 </div>
+             </section>
+             <!--底部-->
+             <div class="manage">
+                 <a href="" class="manageCard">
+                     <i class="iconfont icon-tool"></i>
+                     <span>卡片喜好定制</span>
+                 </a>
+             </div>
+             <div class="addDesktop">
+                 <a href="">
+                     <div class="logo"></div>
+                     <span>点击 <i class="iconfont icon-shangchuan"></i>添加到手机桌面，随时打开看视频</span>
+                 </a>
+             </div>
+             <!--返回顶部 反馈-->
+             <div class="up-letv">
+                 <!-- 返回顶部-->
+                 <div class="uo-div">
+                      <a href="javascript:;" id="up_a" class="up_a1">
+                          <span class="iconfont icon-toparrow"></span>
+                      </a>
+                  </div>
+                 <!-- 反馈-->
+                 <div class="uo-div">
+                     <a href="" class="up_b">
+                         <span class="iconfont icon-tianxiexinxi"></span>
+                     </a>
+                     <div class="m-content">
+                         <div class="content">
+                             <div class="tubo">
+                                 <a href="" class="iconfont icon-fork-first"></a>
+                             </div>
+                             <div class="problem">
+                                 <p>遇到问题了？请告诉我们吧</p>
+                                 <ul>
+                                     <li><a href="">无法播放</a></li>
+                                     <li><a href="">播放卡顿</a></li>
+                                     <li><a href="">影音不同步</a></li>
+                                     <li><a href="">加载过慢</a></li>
+                                     <li><a href="">功能缺失</a></li>
+                                     <li><a href="">其他问题</a></li>
+                                 </ul>
+                             </div>
+                             <div class="photo">
+                                 <p>请输入联系方式（非必填）</p>
+                                 <input type="text" value="邮箱/手机号/QQ"/>
+                             </div>
+                             <div class="text">
+                                 <a href="" class="submit">提交反馈</a>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+    </div>
+    <div class="m-start">
+        <div class="start-logo"></div>
+        <div class="btn-arr">
+            <a href="" class="btn_client">客户端观看</a>
+            <a href="" class="btn_skip">跳过</a>
+        </div>
+    </div>
+    <div class="channel">
+        <div class="box_input">
+            <span class="iconfont icon-xiaoyuhao"></span>
+            <span class="characters">频道</span>
+        </div>
+        <!--图片介绍-->
+        <div class="column">
+            <a href="">
+                    <span class="an_img">
+                        <img src="img/reidian.jpg" alt=""/>
+                    </span>
+            </a>
+            <a href="">
+                    <span class="an_img">
+                        <img src="img/letvPic.jpg" alt=""/>
+                    </span>
+            </a>
+            <a href="">
+                    <span class="an_img">
+                        <img src="img/dianying.jpg" alt=""/>
+                    </span>
+            </a>
+            <a href="">
+                    <span class="an_img">
+                        <img src="img/dongman.jpg" alt=""/>
+                    </span>
+            </a>
+        </div>
+        <!--类别-->
+        <div class="pd_nav1">
+            <ul>
+                <li>
+                    <a href="">
+                        <span class="a_tempBg Bg1"></span>综艺
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="a_tempBg Bg2"></span>体育
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="a_tempBg Bg3"></span>音乐
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="a_tempBg Bg4"></span>会员
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="a_tempBg Bg5"></span>资讯
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="a_tempBg Bg6"></span>娱乐
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="a_tempBg Bg7"></span>亲子
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="a_tempBg Bg8"></span>直播
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="a_tempBg Bg9"></span>纪录片
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="a_tempBg Bg10"></span>教育
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="a_tempBg Bg11"></span>财经
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="a_tempBg Bg12"></span>科技
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="a_tempBg Bg13"></span>汽车
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="a_tempBg Bg14"></span>美剧
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="a_tempBg Bg15"></span>搞笑
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="a_tempBg Bg16"></span>旅游
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!--底部-->
+        <div class="nav">
+            <div class="shengtai">乐视生态成员</div>
+            <ul class="channel_nav">
+                <li><a href="">LeEco</a></li>
+                <li><a href="">乐视商城</a></li>
+                <li><a href="">超级手机</a></li>
+                <li><a href="">超级电视</a></li>
+                <li><a href="">网酒网</a></li>
+                <li><a href="">乐密社区</a></li>
+                <li><a href="">APP下载</a></li>
+                <li><a href="">大咖台</a></li>
+                <li><a href="">乐嗨直播</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script src="js/iscroll.js"></script>
+<script>
+    var Scroll = new iScroll('wrapper',{hScroll:true,vScroll:false,hScrollbar:false, vScrollbar:false});
+    //  水平拖         纵向不能拖      水平没有滚动条      纵向没有滚动条
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
